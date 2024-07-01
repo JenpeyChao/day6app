@@ -1,1 +1,11 @@
-<p>user works!</p>
+<div style="text-align: center;">
+    <h1>Users</h1>
+    <input type="text" placeholder="Add a User" [(ngModel)]="addName" (keydown.enter) = "addUser()" id="areaInput" class="input"/>
+    <input type="text" placeholder="Delete a User" [(ngModel)]="deleteName" (keydown.enter) = "deleteUsers()" id="areaInput" class="input"/>
+
+    <ng-container *ngFor = "let user of userData;">
+        <div>User Id:{{user.id}} Name: {{user.name}}</div>
+
+    </ng-container>
+</div>
+
